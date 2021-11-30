@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const todoRouter  = require('./routes/todo/todoRouter');
 
-mongoose.connect("mongodb://localhost:27017/express-mongodb-promise", {
+mongoose.connect(process.env.MONGO_DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
